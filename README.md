@@ -22,6 +22,7 @@ Mobile responsive, dark mode, toast notifications, and localStorage persistence
 Open the local address shown in your terminal (e.g., http://localhost:5173).
 
 📁 Folder & Component Structure
+```
 gemini-frontend/
 └── src/
     ├── components/
@@ -38,7 +39,7 @@ gemini-frontend/
     ├── App.css
     ├── main.jsx                  # React app entry point
     └── index.css                 # Global styles
-
+```
 ⚙️ Key Features & Implementation Details
 1. Throttling (Simulated AI Thinking)
 - When a user sends a message, the input is disabled and a “Gemini is typing...” indicator appears.
