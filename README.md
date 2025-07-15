@@ -23,21 +23,21 @@ Open the local address shown in your terminal (e.g., http://localhost:5173).
 
 📁 Folder & Component Structure
 gemini-frontend/
-  src/
-    components/
-      ChatroomList.jsx      # Sidebar: chatroom list, search, create/delete
-      ChatroomList.css
-      ChatWindow.jsx        # Main chat UI: messages, input, image upload, infinite scroll
-      ChatWindow.css
-      Login.jsx             # OTP login/signup form
-      Login.css
-      Toast.jsx             # Toast notification system
-      Toast.css
-    store.js                # Zustand store for chatrooms/messages
-    App.jsx                 # Main app, routing, dark mode, layout
-    App.css
-    main.jsx                # React entry point
-    index.css
+└── src/
+    ├── components/
+    │   ├── ChatroomList.jsx      # Sidebar: chatroom list, create/delete chatroom
+    │   ├── ChatroomList.css
+    │   ├── ChatWindow.jsx        # Main chat UI: messages, input, image upload, infinite scroll
+    │   ├── ChatWindow.css
+    │   ├── Login.jsx             # OTP login/signup form
+    │   ├── Login.css
+    │   ├── Toast.jsx             # Toast notification system
+    │   └── Toast.css
+    ├── store.js                  # Zustand store for chatrooms, messages, user state
+    ├── App.jsx                   # App layout, routing, dark mode support
+    ├── App.css
+    ├── main.jsx                  # React app entry point
+    └── index.css                 # Global styles
 
 ⚙️ Key Features & Implementation Details
 1. Throttling (Simulated AI Thinking)
