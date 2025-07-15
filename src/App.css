@@ -1,0 +1,191 @@
+body, #root, .app-container {
+  min-height: 100vh;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #f9f9fb;
+  width: 100vw;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Hide scrollbars for all elements */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  height: 100vh;
+  width: 100vw;
+  background: #f9f9fb;
+  overflow: hidden;
+}
+.main-chat-layout {
+  display: flex;
+  flex: 1;
+  height: calc(100vh - 56px);
+  max-width: 100vw;
+  width: 100vw;
+  margin-top: 56px;
+  border-radius: 0;
+  box-shadow: none;
+  background: #f9f9fb;
+  overflow: hidden;
+}
+@media (max-width: 700px) {
+  .main-chat-layout {
+    flex-direction: column;
+    height: auto;
+    max-width: 100vw;
+    border-radius: 0;
+    box-shadow: none;
+    margin-top: 56px;
+  }
+  .chatroom-list {
+    width: 100% !important;
+    height: auto !important;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0.5rem;
+  }
+  .chat-window {
+    height: calc(100vh - 220px);
+    min-height: 320px;
+  }
+}
+.logout-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 10;
+  border-radius: 0;
+  margin-bottom: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  background: linear-gradient(90deg, #6a82fb 0%, #fc5c7d 100%);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 56px;
+  padding: 0 2.5rem 0 1.2rem;
+}
+.logout-bar span {
+  margin-right: auto;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Center login form when not logged in */
+.app-container.center-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: #f9f9fb;
+}
+.logout-btn {
+  background: #d32f2f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+  margin-left: 1rem;
+}
+.logout-btn:hover {
+  background: #b71c1c;
+}
+
+body.dark-mode, .dark-mode .app-container, .dark-mode .main-chat-layout {
+  background: #181a20 !important;
+  color: #f1f1f1;
+}
+body.dark-mode .logout-bar {
+  background: linear-gradient(90deg, #232526 0%, #414345 100%);
+  color: #fff;
+}
+body.dark-mode .chatroom-list {
+  background: #232526;
+  border-right: 1px solid #333;
+}
+body.dark-mode .chatroom-list li {
+  color: #f1f1f1;
+}
+body.dark-mode .chatroom-list li.active {
+  background: #3949ab;
+  color: #fff;
+}
+body.dark-mode .chatroom-list input[type="text"] {
+  background: #232526;
+  color: #f1f1f1;
+  border: 1px solid #444;
+}
+body.dark-mode .chatroom-list button[type="submit"] {
+  background: #3949ab;
+}
+body.dark-mode .chat-window {
+  background: #181a20;
+}
+body.dark-mode .chat-header {
+  background: #232526;
+  color: #fff;
+  border-bottom: 1px solid #333;
+}
+body.dark-mode .message-bubble {
+  border: 1.5px solid #333;
+  color: #f1f1f1;
+  background: none;
+}
+body.dark-mode .message-bubble.user {
+  border: 1.5px solid #90caf9;
+  color: #90caf9;
+}
+body.dark-mode .message-bubble.ai {
+  border: 1.5px solid #ce93d8;
+  color: #ce93d8;
+}
+body.dark-mode .chat-input {
+  background: #232526;
+  border-top: 1px solid #333;
+}
+body.dark-mode .chat-input input[type="text"] {
+  background: #232526;
+  color: #f1f1f1;
+  border: 1px solid #444;
+}
+body.dark-mode .chat-input button,
+body.dark-mode .chat-input .image-upload-btn {
+  background: #3949ab;
+  color: #fff;
+}
+body.dark-mode .chat-input button:hover {
+  background: #283593;
+}
+.dark-toggle-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+  margin-right: 1.2rem;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.2s;
+  padding: 0.2rem 0.5rem;
+  line-height: 1;
+}
+.dark-toggle-btn:focus {
+  outline: 2px solid #fff;
+}
